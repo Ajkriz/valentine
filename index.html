@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Name Input Card -->
+        <div class="card" id="nameCard">
+            <h1 class="question">First, who is this? 😊</h1>
+            <input type="text" id="nameInput" placeholder="Enter your name..." autocomplete="off">
+            <button class="btn yes-btn" id="submitNameBtn">Continue</button>
+        </div>
+
+        <!-- Main Card (Initially Hidden) -->
+        <div class="card" id="mainCard" style="display: none;">
+            <h1 class="question">Will you be my Valentine? 🌹</h1>
+            <div class="buttons">
+                <button class="btn yes-btn" id="yesBtn">Yes</button>
+                <button class="btn no-btn" id="noBtn">No</button>
+            </div>
+            <div class="message-container" id="messageContainer" style="display: none;">
+                <p class="message-text">Stop messing with me! 😾</p>
+                <img src="cute_cat.png" alt="Cute baby" class="cat-img" id="catImg">
+            </div>
+        </div>
+        <div class="success-container" id="successContainer" style="display: none;">
+            <h1>Yay! Happy Valentine's Day! 💖</h1>
+            <p>I knew you'd say yes! 🥰</p>
+        </div>
+    </div>
+    <script src="supabase_client.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
